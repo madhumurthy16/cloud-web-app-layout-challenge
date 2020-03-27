@@ -78,15 +78,17 @@ hr {
 }
 html {
 	font-size: 62.5%; /* 1rem = 10px */
+	height: 100%;
 }
 
-body, input, text {
+body, input, button {
  font-family: 'TT Commons';
- font-weight: 400;
- font-size: 1.6rem;
+ font-weight: 500;
+ font-size: 1.4rem;
  display: flex;
  justify-content: center;
  align-items: center;
+ height: 100%;
 }
 
 .container {
@@ -95,8 +97,8 @@ body, input, text {
 	grid-column-gap: 20px;
 	max-width: 100%;
 	width: 1300px;
-	min-height: 990px;
-	height: 100%;
+	/*min-height: 990px;*/
+	height: 98%;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -107,9 +109,11 @@ body, input, text {
 .sidebar {
 	background-color: #343951;
 	padding: 40px;
+	padding-bottom: 35px;
 	display: flex;
 	flex-direction: column;
-	/*justify-content: space-between;*/
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
 }
 
 .logo {
@@ -120,18 +124,22 @@ body, input, text {
 .sidebar .nav-item {
 	color: #777b8f;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
+	font-size: 1.6rem;
 }
 
 .sidebar li.nav-item + li.nav-item {
 	margin-top: 40px;
 }
 
-
 .sidebar .nav-item img {
 	height: 18px;
 	width: 18px;
 	margin-right: 28px;
+}
+
+.sidebar .nav-item.active {
+	color: #fff;
 }
 
 .divider {
@@ -140,7 +148,59 @@ body, input, text {
 }
 
 .sidebar .actions {
+	display: flex;
+	align-items: center;
 	margin-top: auto;
+	background-color: #464b61;
+	padding: 15px;
+	border-radius: 15px;
+	color: #8f93a0;
+	margin-bottom: 25px;
+
+}
+
+.actions-item {
+	display: flex;
+	align-items: center;
+}
+
+.actions-item + .actions-item {
+	margin-top: 5px;
+}
+
+.actions-item img {
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+}
+
+.btn-create-action {
+	background-color: #ffa000;
+	color: #ffe6bc;
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 5px;
+	border-radius: 8px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+}
+
+/*.btn-create-action .text {
+	align-self: flex-start;
+}*/
+
+.btn-create-action::after {
+	content: '+';
+	background-color: #ffb333;
+	width: 28px;
+	height: 28px;
+	font-size: 2.4rem;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
 }
 
 
@@ -161,4 +221,6 @@ body, input, text {
 
 .stats {
 	background-color: #f5f6fb;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
 }
