@@ -55,12 +55,110 @@ blockquote::after {
 	content: "";
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+hr {
+	border: 0;
+}
+
 /* -------------------------------------------------------------------------- */
 
-/*	0. General
+/*	1. General
 /* -------------------------------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+}
 
 body, input, text {
  font-family: 'TT Commons';
  font-weight: 400;
+ font-size: 1.6rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 220px 1fr 340px;
+	grid-column-gap: 20px;
+	max-width: 100%;
+	width: 1300px;
+	min-height: 990px;
+	height: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	2. Sidebar Left - Navigation, Actions
+/* -------------------------------------------------------------------------- */
+
+.sidebar {
+	background-color: #343951;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	/*justify-content: space-between;*/
+}
+
+.logo {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.sidebar .nav-item {
+	color: #777b8f;
+	display: flex;
+	align-items: flex-start;
+}
+
+.sidebar li.nav-item + li.nav-item {
+	margin-top: 40px;
+}
+
+
+.sidebar .nav-item img {
+	height: 18px;
+	width: 18px;
+	margin-right: 28px;
+}
+
+.divider {
+	margin: 54px -40px 0 -40px;
+	border-top: 1px solid #4e5265;
+}
+
+.sidebar .actions {
+	margin-top: auto;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	0. Main Content
+/* -------------------------------------------------------------------------- */
+
+.content {
+	background-color: #f5f6fb;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	3. Sidebar Right - Stats
+/* -------------------------------------------------------------------------- */
+
+.stats {
+	background-color: #f5f6fb;
 }

@@ -7,15 +7,79 @@
     <title>CSS Layout Challenge - Cloud Web App</title>
   </head>
   <body>
-    <aside class="sidebar-left">
-        sidebar
-    </aside>
-    <main>
-      Content
-    </main>
-    <aside class="stats">
-        stats
-    </aside>
+
+    <div class="container">
+
+      <aside class="sidebar">
+
+        <header>
+          <img class="logo" src="./images/logo.png" alt="logo" />
+
+          <nav>
+            <ul class="nav-items">
+              <li class="nav-item">
+                <img src="./images/home.svg" alt="Home" />
+                Home
+              </li>
+              <li class="nav-item">
+                <img src="./images/folder.svg" alt="My Files" />
+                My Files
+              </li>
+              <li class="nav-item">
+                <img src="./images/clock.svg" alt="Recent Files" />
+                Recent Files
+              </li>
+              <li class="nav-item">
+                <img src="./images/users.svg" alt="Shared Files" />
+                Shared Files
+              </li>
+              <li class="nav-item">
+                <img src="./images/alert-circle.svg" alt="File Request" />
+                File Request
+              </li>
+              <li class="nav-item">
+                <img src="./images/trash-2.svg" alt="Trash" />
+                Trash
+              </li>
+            </ul> <!-- .nav-items -->
+         </nav>
+         <hr class="divider"/>
+
+       </header>
+
+       <div class="actions">
+
+         <ul>
+           <li class="action-item">
+             <img src="./images/upload.svg" alt="Upload Files" />
+             Upload files
+           </li>
+           <li class="action-item">
+             <img src="./images/folder.svg" alt="Upload Folder" />
+             Upload folder
+           </li>
+           <li class="action-item">
+             <img src="./images/folder-plus.svg" alt="New Folder" />
+             New folder
+           </li>
+           <li class="action-item">
+             <img src="./images/more-horizontal.svg" alt="More" />
+             More
+           </li>
+         </ul>
+
+         <button class="btn-create-action">Create New</button>
+       </div> <!-- .actions -->
+
+      </aside>
+      <main class="content">
+        Content
+      </main>
+      <aside class="stats">
+          stats
+      </aside>
+
+    </div> <!-- .container -->
 
   </body>
 </html>
