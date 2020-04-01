@@ -72,9 +72,108 @@
        <button class="btn-create-action"><span class="text">Create New</span></button>
 
       </aside>
-      <main class="content">
-        Content
+
+      <main class="main-content">
+
+        <section class="search-section">
+          <label for="search-form">
+            <input type="search" id="search-form" class="search-field" placeholder="Search" />
+          </label>
+        </section> <!-- .search-section -->
+
+        <section class="recent-projects">
+
+          <header class="recent-projects-header">
+
+            <h1>Recently Used</h1>
+
+            <div class="recent-projects-actions">
+
+              <button class="recent-projects-action">
+                <img src="./images/grid.svg" alt="grid-view" />
+                <span class="sr-only">Grid View</span>
+              </button>
+
+              <button class="recent-projects-action">
+                <img src="./images/align-justify.svg" alt="list-view" />
+                <span class="sr-only">List View</span>
+              </button>
+
+            </div> <!-- .recent-projects-actions -->
+
+          </header> <!-- .recent-projects-header -->
+
+          <section class="projects">
+
+            <article class="project">
+
+              <button class="project-action">
+                <img src="./images/more-vertical.svg" alt="more-actions" />
+                <span class="sr-only">More Actions</span>
+              </button>
+
+              <div class="project-participants">
+                <img src="./images/icon-double-folder.png" alt="project-folder">
+
+                <ul class="participants">
+                  <li><img src="./images/face1.jpg" alt="participant" /></li>
+                  <li><img src="./images/face2.jpg" alt="participant" /></li>
+                </ul> <!-- .participants -->
+              </div> <!-- .project-participants -->
+
+              <h3 class="project-title">App Project</h3>
+              <p class="project-date">Created: 20.02.2020</p>
+
+            </article> <!-- .project -->
+
+            <article class="project">
+              <button class="project-action">
+                <img src="./images/more-vertical.svg" alt="more-actions" />
+                <span class="sr-only">More Actions</span>
+              </button>
+
+              <div class="project-participants">
+                <img src="./images/icon-double-folder.png" alt="project-folder">
+
+                <ul class="participants">
+                  <li><img src="./images/face3.jpg" alt="project-participant" /></li>
+                  <li><img src="./images/face4.jpg" alt="project-participant" /></li>
+                </ul> <!-- .participants -->
+              </div> <!-- .project-participants -->
+
+              <h3 class="project-title">Project: fitbit</h3>
+              <p class="project-date">Created: 28.02.2020</p>
+
+            </article>
+
+            <article class="project">
+              <button class="project-action">
+                <img src="./images/more-vertical.svg" alt="more-actions" />
+                <span class="sr-only">More Actions</span>
+              </button>
+
+              <div class="project-participants">
+                <img src="./images/icon-double-folder.png" alt="project-folder">
+
+                <ul class="participants">
+                  <li><img src="./images/face5.jpg" alt="project-participant" /></li>
+                  <li><img src="./images/face6.jpg" alt="project-participant" /></li>
+                  <li class="more-participants">+3</li>
+                </ul> <!-- .participants -->
+              </div> <!-- .project-participants -->
+
+              <h3 class="project-title">Client Documents</h3>
+              <p class="project-date">Created: 4.03.2020</p>
+
+            </article>
+
+          </section> <!-- .projects -->
+
+
+        </section> <!-- .recent-projects -->
+
       </main>
+
       <aside class="stats">
           stats
       </aside>
