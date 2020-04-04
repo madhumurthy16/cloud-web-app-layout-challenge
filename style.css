@@ -85,7 +85,10 @@ html {
 body, input, button {
  font-family: 'TT Commons';
  font-weight: 500;
- font-size: 1.4rem;
+ font-size: 1.6rem;
+}
+
+body {
  display: flex;
  justify-content: center;
  align-items: center;
@@ -98,7 +101,6 @@ body, input, button {
 	grid-column-gap: 20px;
 	max-width: 100%;
 	width: 1300px;
-	/*min-height: 990px;*/
 	height: 98%;
 }
 
@@ -121,7 +123,7 @@ h3 {
 	color: #585c70;
 }
 
-p {
+p, time {
 	color: #979cba;
 }
 
@@ -219,7 +221,7 @@ p {
 	border-radius: 15px;
 	color: #8f93a0;
 	margin-bottom: 25px;
-
+	font-size: 1.4rem;
 }
 
 .actions-item {
@@ -327,6 +329,10 @@ input::-moz-placeholder {
 	justify-content: space-between;
 }
 
+section.projects {
+	margin-right: 20px;
+}
+
 /* Recent Projects  -------------- */
 
 .recent-projects {
@@ -369,6 +375,7 @@ input::-moz-placeholder {
 
 .project-participants {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	margin-bottom: 40px;
 }
@@ -380,6 +387,7 @@ input::-moz-placeholder {
 .participants li {
 	display: inline;
 	margin-left: -10px;
+	margin-left: -0.625rem;
 }
 
 .participants li img {
@@ -394,6 +402,10 @@ input::-moz-placeholder {
 
 .projects .project-title {
 	margin-bottom: 14px;
+}
+
+.projects .project-date {
+	font-size: 1.4rem;
 }
 
 .projects .project li.more-participants {
@@ -414,12 +426,92 @@ input::-moz-placeholder {
 
 /* Recent Files ------------------ */
 
-.files {
+/*.files {
 	display: grid;
-	grid-template-columns: 340px 1fr 1fr 1fr;
 	grid-template-rows: repeat(4, 1fr);
 	grid-row-gap: 20px;
-	
+}*/
+
+.headings {
+	margin-bottom: 25px;
+}
+
+.headings .name {
+	grid-column: 1 / 3;
+}
+
+.headings,
+.file-details {
+	display: grid;
+	grid-template-columns: 40px  45.22% 2fr 2fr 1fr;
+	align-items: center;
+	grid-template-areas:
+		"icon name owners date-modified more-actions";
+}
+
+.file-details {
+	padding: 16px 16px 18px 16px;
+	background-color: #fff;
+	border-radius: 8px;
+}
+
+.file-details + .file-details {
+	margin-top: 20px;
+}
+
+.file-details .file-name {
+	grid-area: name;
+	color: #65697b;
+}
+
+.headings .owners,
+.file-details .file-owners {
+	grid-area: owners;
+	padding-right: 30px;
+}
+
+.headings .date-modified,
+.file-details time {
+	grid-area: date-modified;
+	justify-self: center;
+}
+
+.file-details img:first-child {
+	grid-area: icon;
+}
+
+.file-details img:last-child {
+	grid-area: more-actions;
+	justify-self: end;
+}
+
+/* Share with me ----------------- */
+
+section.share-with-me article {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+section.share-with-me article .project-participants {
+	margin-bottom: 16px;
+}
+
+section.share-with-me article .project-participants > img {
+	margin-right: 70px;
+}
+
+section.share-with-me article .project-title {
+	margin-bottom: 4px;
+}
+
+section.share-with-me article .project-participants ul li img {
+	border: 2px solid #fdbc4f;
+}
+
+section.share-with-me article .project-participants ul li:first-child img {
+	border: 2px solid #5bddb5;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /*	3. Sidebar Right - Stats
