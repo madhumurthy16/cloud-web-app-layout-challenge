@@ -321,7 +321,7 @@ input::-moz-placeholder {
 .content-header {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 38px;
+	margin-bottom: 30px;
 }
 
 .header-actions {
