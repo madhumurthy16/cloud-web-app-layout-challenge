@@ -521,4 +521,102 @@ section.share-with-me article .project-participants ul li:first-child img {
 	background-color: #f5f6fb;
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
+	padding: 40px;
+}
+
+.stats .user-profile {
+	padding-top: 5px;
+	padding-bottom: 28px;
+	border-bottom: 2px solid #e2e8f2;
+	margin-left: -40px;
+	margin-right: -40px;
+	margin-bottom: 25px;
+}
+
+.stats .user-profile ul li {
+	display: inline-block;
+}
+
+.stats .user-profile ul {
+	padding: 0 40px 0 40px;
+}
+
+.stats .user-profile ul {
+	display: flex;
+	align-items: center;
+}
+
+.stats .user-profile ul li:first-child {
+	margin-right: 16px;
+}
+
+.stats .user-profile ul li:nth-child(2) {
+	margin-right: auto;
+}
+
+.stats .user-profile ul li:nth-child(3) {
+	margin-right: 10px;
+	color: #585c70;
+	font-weight: 500;
+}
+
+.stats .usage-stats .storage-percentage {
+	margin: 35px 0 25px 0;
+}
+
+.stats .usage-stats .storage-percentage  .percent-used {
+	background-color: #fff;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.stats .usage-stats p.total-usage {
+	margin-bottom: 35px;
+	font-size: 14px;
+	color: #a5aaca;
+}
+
+.stats .usage-stats .storage-items {
+	display: flex;
+	flex-direction: column;
+}
+
+.stats .usage-stats .storage-items .storage-item {
+	display: flex;
+	align-items: center;
+	margin: 12px 0 12px 0;
+}
+
+.stats .usage-stats .storage-items .storage-item:first-child {
+	margin-top: 0;
+}
+
+.stats .usage-stats .storage-items .storage-item  img {
+	margin-right: 8px;
+}
+
+.stats .usage-stats .storage-items .storage-item .folder-name {
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	color: #5d6175;
+}
+
+.stats .usage-stats .storage-items .storage-item .folder-name span {
+	font-size: 12px;
+	color: #a5aaca;
+}
+
+.stats .usage-stats .storage-items .storage-item .storage-used {
+	padding: 8px 12px 4px;
+	background-color: #fff;
+	border-radius: 6px;
+	font-size: 14px;
+	color: #65697b;
 }
