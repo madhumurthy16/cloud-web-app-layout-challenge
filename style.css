@@ -186,7 +186,7 @@ p, time {
 	margin-bottom: 40px;
 }
 
-.sidebar .nav-item {
+.sidebar li.nav-item {
 	color: #777b8f;
 	display: flex;
 	align-items: center;
