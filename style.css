@@ -560,8 +560,37 @@ section.share-with-me article .project-participants ul li:first-child img {
 	font-weight: 500;
 }
 
+/*-- Usage Graph -- */
+
+/*.usage-graph {
+	position: relative;
+}
+
+.usage-graph .arc {
+	position: absolute;
+	fill: transparent;
+	border: 1px solid #afafaf;
+}
+
+.arc circle {
+	fill: transparent;
+	fill: #000;
+	stroke-linecap: round;
+	stroke-width: 7px;
+}
+
+.arc--docs {
+	stroke-dasharray: 570.8 570.8;
+	stroke-dashoffset: 371.02;
+	transform: rotate(-32deg);
+	transform-origin: center;
+	stroke: #ffa000;
+}*/
+
 .stats .usage-stats .storage-percentage {
 	margin: 35px 0 25px 0;
+	display: flex;
+  justify-content: center;
 }
 
 .stats .usage-stats .storage-percentage  .percent-used {
@@ -575,10 +604,20 @@ section.share-with-me article .project-participants ul li:first-child img {
 	justify-content: center;
 }
 
+.stats .usage-stats .storage-percentage  .percent-used p:first-child {
+	font-size: 4.5rem;
+	color: #353a52;
+}
+
+.stats .usage-stats .storage-percentage  .percent-used p:nth-child(2) {
+	font-size: 2.2rem;
+}
+
 .stats .usage-stats p.total-usage {
 	margin-bottom: 35px;
 	font-size: 14px;
 	color: #a5aaca;
+	text-align: center;
 }
 
 .stats .usage-stats .storage-items {
