@@ -95,6 +95,7 @@ body {
  height: 100%;
 }
 
+
 .container {
 	display: grid;
 	grid-template-columns: 220px 1fr 340px;
@@ -103,6 +104,7 @@ body {
 	width: 1300px;
 	height: 98%;
 }
+
 
 a {
 	text-decoration: none;
@@ -350,6 +352,12 @@ section.projects {
 
 .projects {
 	display: flex;
+	flex-direction: column
+}
+
+.project + .project {
+	margin-top: 12px;
+	margin-left: 0;
 }
 
 .project {
@@ -360,10 +368,6 @@ section.projects {
 	padding: 32px 18px;
 	border-radius: 15px;
 	position: relative;
-}
-
-.project + .project {
-	margin-left: 12px;
 }
 
 .project-action img {
@@ -658,4 +662,21 @@ section.share-with-me article .project-participants ul li:first-child img {
 	border-radius: 6px;
 	font-size: 14px;
 	color: #65697b;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	Media Queries
+/* -------------------------------------------------------------------------- */
+
+@media ( min-width: 425px ) {
+
+	.projects {
+		flex-direction: row;
+	}
+
+	.project + .project {
+		margin-top: 0;
+		margin-left: 12px
+	}
 }
