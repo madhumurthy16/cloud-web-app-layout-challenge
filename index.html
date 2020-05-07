@@ -6,40 +6,43 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>CSS Layout Challenge - Cloud Web App</title>
   </head>
+
   <body>
 
     <div class="container">
 
       <aside class="sidebar">
 
-        <header>
-          <img class="logo" src="./images/logo.png" alt="logo" />
+        <header class="main-header">
+          <a class="logo" href="/">
+            <img class="logo" src="./images/logo.png" alt="logo" />
+          </a>
 
           <nav>
             <ul class="nav-items">
               <li class="nav-item active">
                 <img src="./images/home.svg" alt="Home" />
-                Home
+                <span>Home</span>
               </li>
               <li class="nav-item">
                 <img src="./images/folder.svg" alt="My Files" />
-                My Files
+                <span>My Files</span>
               </li>
               <li class="nav-item">
                 <img src="./images/clock.svg" alt="Recent Files" />
-                Recent Files
+                <span>Recent Files</span>
               </li>
               <li class="nav-item">
                 <img src="./images/users.svg" alt="Shared Files" />
-                Shared Files
+                <span>Shared Files</span>
               </li>
               <li class="nav-item">
                 <img src="./images/alert-circle.svg" alt="File Request" />
-                File Request
+                <span>File Request</span>
               </li>
               <li class="nav-item">
                 <img src="./images/trash-2.svg" alt="Trash" />
-                Trash
+                <span>Trash</span>
               </li>
             </ul> <!-- .nav-items -->
 
@@ -47,7 +50,7 @@
 
         <hr class="divider"/>
 
-       </header>
+      </header> <!-- .main-header -->
 
        <div class="actions">
 
@@ -74,301 +77,317 @@
 
        <button class="btn-create-action"><span class="text">Create New</span></button>
 
-      </aside>
+    </aside> <!-- .sidebar -->
 
-      <main class="main-content">
+    <main class="main-content">
 
-        <section class="search-section">
-          <label for="search-form">
-            <input type="search" id="search-form" class="search-field" placeholder="Search" />
-          </label>
-        </section> <!-- .search-section -->
+      <section class="search-section">
 
-        <section class="recent-projects">
+        <label for="search-form">
+          <input type="search" id="search-form" class="search-field" placeholder="Search" />
+        </label>
 
-          <header class="content-header">
+      </section> <!-- .search-section -->
 
-            <h1>Recently Used</h1>
+      <section class="recent-projects">
 
-            <div class="header-actions">
+        <header class="content-header">
 
-              <button class="recent-projects-action">
-                <img src="./images/grid.svg" alt="grid-view" />
-                <span class="sr-only">Grid View</span>
-              </button>
+          <h1>Recently Used</h1>
 
-              <button class="recent-projects-action">
-                <img src="./images/align-justify.svg" alt="list-view" />
-                <span class="sr-only">List View</span>
-              </button>
+          <div class="header-actions">
 
-            </div> <!-- .header-actions -->
+            <button class="recent-projects-action">
+              <img src="./images/grid.svg" alt="grid-view" />
+              <span class="sr-only">Grid View</span>
+            </button>
 
-          </header> <!-- .header-title -->
+            <button class="recent-projects-action">
+              <img src="./images/align-justify.svg" alt="list-view" />
+              <span class="sr-only">List View</span>
+            </button>
 
-          <section class="projects">
+          </div> <!-- .header-actions -->
 
-            <article class="project">
+        </header> <!-- .content-header -->
 
-              <button class="project-action">
-                <img src="./images/more-vertical.svg" alt="more-actions" />
-                <span class="sr-only">More Actions</span>
-              </button>
+        <section class="projects">
 
-              <div class="project-participants">
-                <img src="./images/icon-double-folder.png" alt="project-folder">
+          <article class="project">
 
-                <ul class="participants">
-                  <li><img src="./images/face1.jpg" alt="participant" /></li>
-                  <li><img src="./images/face2.jpg" alt="participant" /></li>
-                </ul> <!-- .participants -->
-              </div> <!-- .project-participants -->
+            <button class="project-action">
+              <img src="./images/more-vertical.svg" alt="more-actions" />
+              <span class="sr-only">More Actions</span>
+            </button>
 
-              <h3 class="project-title">App Project</h3>
-              <p class="project-date">Created: 20.02.2020</p>
+            <div class="project-participants">
+              <img src="./images/icon-double-folder.png" alt="project-folder">
 
-            </article> <!-- .project -->
+              <ul class="participants">
+                <li><img src="./images/face1.jpg" alt="participant" /></li>
+                <li><img src="./images/face2.jpg" alt="participant" /></li>
+              </ul> <!-- .participants -->
+            </div> <!-- .project-participants -->
 
-            <article class="project">
-              <button class="project-action">
-                <img src="./images/more-vertical.svg" alt="more-actions" />
-                <span class="sr-only">More Actions</span>
-              </button>
+            <h3 class="project-title">App Project</h3>
+            <p class="project-date">Created: 20.02.2020</p>
 
-              <div class="project-participants">
-                <img src="./images/icon-double-folder.png" alt="project-folder">
+          </article> <!-- .project -->
 
-                <ul class="participants">
-                  <li><img src="./images/face3.jpg" alt="project-participant" /></li>
-                  <li><img src="./images/face4.jpg" alt="project-participant" /></li>
-                </ul> <!-- .participants -->
-              </div> <!-- .project-participants -->
+          <article class="project">
 
-              <h3 class="project-title">Project: fitbit</h3>
-              <p class="project-date">Created: 28.02.2020</p>
+            <button class="project-action">
+              <img src="./images/more-vertical.svg" alt="more-actions" />
+              <span class="sr-only">More Actions</span>
+            </button>
 
-            </article>
+            <div class="project-participants">
+              <img src="./images/icon-double-folder.png" alt="project-folder">
 
-            <article class="project">
-              <button class="project-action">
-                <img src="./images/more-vertical.svg" alt="more-actions" />
-                <span class="sr-only">More Actions</span>
-              </button>
+              <ul class="participants">
+                <li><img src="./images/face3.jpg" alt="project-participant" /></li>
+                <li><img src="./images/face4.jpg" alt="project-participant" /></li>
+              </ul> <!-- .participants -->
+            </div> <!-- .project-participants -->
 
-              <div class="project-participants">
-                <img src="./images/icon-double-folder.png" alt="project-folder">
+            <h3 class="project-title">Project: fitbit</h3>
+            <p class="project-date">Created: 28.02.2020</p>
 
-                <ul class="participants">
-                  <li><img src="./images/face5.jpg" alt="project-participant" /></li>
-                  <li><img src="./images/face6.jpg" alt="project-participant" /></li>
-                  <li class="more-participants">+3</li>
-                </ul> <!-- .participants -->
-              </div> <!-- .project-participants -->
+          </article> <!-- .project -->
 
-              <h3 class="project-title">Client Documents</h3>
-              <p class="project-date">Created: 4.03.2020</p>
+          <article class="project">
 
-            </article>
+            <button class="project-action">
+              <img src="./images/more-vertical.svg" alt="more-actions" />
+              <span class="sr-only">More Actions</span>
+            </button>
 
-          </section> <!-- .projects -->
+            <div class="project-participants">
+              <img src="./images/icon-double-folder.png" alt="project-folder">
 
-        </section> <!-- .recent-projects -->
+              <ul class="participants">
+                <li><img src="./images/face5.jpg" alt="project-participant" /></li>
+                <li><img src="./images/face6.jpg" alt="project-participant" /></li>
+                <li class="more-participants">+3</li>
+              </ul> <!-- .participants -->
+            </div> <!-- .project-participants -->
 
-        <section class="recent-files">
+            <h3 class="project-title">Client Documents</h3>
+            <p class="project-date">Created: 4.03.2020</p>
 
-          <header class="content-header">
+          </article> <!-- .project -->
 
-            <h1>Recent Files</h1>
-            <div class="header-actions">
-              <a href="">View All</a>
-            </div>
+        </section> <!-- .projects -->
 
-          </header> <!-- .content-header -->
+      </section> <!-- .recent-projects -->
 
-          <section class="files">
-            <div class="headings">
-              <p class="name">Name &#8595;</p>
-              <p class="owners">Owners</p>
-              <p class="date-modified">Last Modified</p>
-              <p></p> 
-            </div> <!-- .headings -->
+      <section class="recent-files">
 
-            <div class="file-details">
-              <img src="./images/icon-ps.png" alt="Photoshop File" />
-              <p class="file-name">Travel Landing Page</p>
-              <p class="file-owners">5 members</p>
-              <time datetime="2020-3-8">Mar 8, 2020</time>
-              <img src="./images/more-horizontal.svg" alt="Project Actions" />
-            </div> <!-- .file-details -->
+        <header class="content-header">
 
-            <div class="file-details">
-              <img src="./images/icon-photo.png" alt="Image File" />
-              <p class="file-name">Ture Photos</p>
-              <p class="file-owners">12 members</p>
-              <time datetime="2020-3-8">Mar 8, 2020</time>
-              <img src="./images/more-horizontal.svg" alt="Project Actions" />
-            </div> <!-- .file-details -->
-
-            <div class="file-details">
-              <img src="./images/icon-pdf.png" alt="PDF File" />
-              <p class="file-name">Dashboard Structure</p>
-              <p class="file-owners">10 members</p>
-              <time datetime="2020-3-9">Mar 9, 2020</time>
-              <img src="./images/more-horizontal.svg" alt="Project Actions" />
-            </div> <!-- .file-details -->
-
-            <div class="file-details">
-              <img src="./images/icon-zip.png" alt="Zip File" />
-              <p class="file-name">Character Illustration</p>
-              <p class="file-owners">3 members</p>
-              <time datetime="2020-3-10">Mar 10, 2020</time>
-              <img src="./images/more-horizontal.svg" alt="Project Actions" />
-            </div> <!-- .file-details -->
-
-          </section> <!-- .files -->
-
-        </section> <!-- .recent-files -->
-
-        <section class="share-with-me">
-
-          <header class="content-header">
-
-            <h1>Share with me</h1>
-            <div class="header-actions">
-              <a href="">View All</a>
-            </div>
-
-          </header> <!-- .content-header -->
-
-          <section class="projects">
-
-            <article class="project">
-
-              <div class="project-participants">
-                <img src="./images/icon-single-folder.png" alt="Project Folder">
-
-                <ul class="participants">
-                  <li><img src="./images/face7.jpg" alt="Participant" /></li>
-                  <li><img src="./images/face8.jpg" alt="Participant" /></li>
-                </ul> <!-- .participants -->
-              </div> <!-- .project-participants -->
-
-              <h3 class="project-title">Landing Page</h3>
-              <p class="file-count">12 Files</p>
-
-            </article> <!-- .project -->
-
-            <article class="project">
-
-              <div class="project-participants">
-                <img src="./images/icon-single-folder.png" alt="Project Folder">
-
-                <ul class="participants">
-                  <li><img src="./images/face9.jpg" alt="Participant" /></li>
-                  <li><img src="./images/face10.jpg" alt="Participant" /></li>
-                  <li><img src="./images/face2.jpg" alt="Participant" /></li>
-
-                </ul> <!-- .participants -->
-              </div> <!-- .project-participants -->
-
-              <h3 class="project-title">Illustration Pack</h3>
-              <p class="file-count">24 Files</p>
-
-            </article>
-
-            <article class="project">
-
-              <div class="project-participants">
-                <img src="./images/icon-single-folder.png" alt="Project Folder">
-
-                <ul class="participants">
-                  <li><img src="./images/face11.jpg" alt="Participant" /></li>
-                  <li><img src="./images/face12.jpg" alt="Participant" /></li>
-                </ul> <!-- .participants -->
-              </div> <!-- .project-participants -->
-
-              <h3 class="project-title">CV Design</h3>
-              <p class="file-count">6 Files</p>
-
-            </article>
-
-          </section> <!-- .projects -->
-
-        </section> <!-- .share-with-me -->
-
-      </main>
-
-      <aside class="stats">
-
-        <section class="user-profile">
-
-          <ul class="user">
-            <li><img src="./images/bell.svg" alt="Notifications" /></li>
-            <li><img src="./images/settings.svg" alt="Settings" /></li>
-            <li><span>Imran
-              <img src="./images/chevron-down.svg" alt="More Options"/>
-            </span></li>
-            <li><img src="./images/imran.png" alt="Profile Picture" /></li>
-          </ul><!-- .user -->
-
-        </section> <!-- .user-profile -->
-
-        <section class="usage-stats">
-          <h1>Storage</h1>
-
-          <!-- <div class="usage-graph">
-
-            <svg class="arc" width="190" height="190" viewBox="0 0 190 190">
-              <circle
-                class="arc--docs"
-                cx="95"
-                cy="95"
-                r="91"
-                fill="transparent"
-              />
-            </svg>
-
-          </div> <!-- .usage-graph -->
-
-          <div class="storage-percentage">
-            <div class="percent-used">
-              <p>85%</p>
-              <p>Used</p>
-            </div>
+          <h1>Recent Files</h1>
+          <div class="header-actions">
+            <a href="/">View All</a>
           </div>
 
-          <p class="total-usage">420.2 GB of 500 GB used</p>
+        </header> <!-- .content-header -->
 
-          <div class="storage-breakdown">
-            <ul class="storage-items">
-              <li class="storage-item">
-                <img src="./images/icon-docs-lg.png" alt="Documents Folder" />
-                <p class="folder-name">Documents<span>720 files</span></p>
-                <p class="storage-used">200 GB</p>
-              </li>
-              <li class="storage-item">
-                <img src="./images/icon-video-lg.png" alt="Videos Folder" />
-                <p class="folder-name">Videos<span>124 files</span></p>
-                <p class="storage-used">125 GB</p>
-              </li>
-              <li class="storage-item">
-                <img src="./images/icon-photo-lg.png" alt="Images Folder" />
-                <p class="folder-name">Images<span>1200 files</span></p>
-                <p class="storage-used">75 GB</p>
-              </li>
-              <li class="storage-item">
-                <img src="./images/icon-other-lg.png" alt="Others Folder" />
-                <p class="folder-name">Others<span>30 files</span></p>
-                <p class="storage-used">50 GB</p>
-              </li>
-            </ul>
+        <section class="files">
 
-          </div> <!-- .storage-division -->
-        </section> <!-- .usage-stats -->
+          <div class="headings">
+            <p class="name">Name &#8595;</p>
+            <p class="owners">Owners</p>
+            <p class="date-modified">Last Modified</p>
+            <p></p>
+          </div> <!-- .headings -->
 
-      </aside> <!-- .stats -->
+          <div class="file-details">
+            <img src="./images/icon-ps.png" alt="Photoshop File" />
+            <p class="file-name">Travel Landing Page</p>
+            <p class="file-owners">5 members</p>
+            <time datetime="2020-3-8">Mar 8, 2020</time>
+            <img src="./images/more-horizontal.svg" alt="Project Actions" />
+          </div> <!-- .file-details -->
 
-    </div> <!-- .container -->
+          <div class="file-details">
+            <img src="./images/icon-photo.png" alt="Image File" />
+            <p class="file-name">Ture Photos</p>
+            <p class="file-owners">12 members</p>
+            <time datetime="2020-3-8">Mar 8, 2020</time>
+            <img src="./images/more-horizontal.svg" alt="Project Actions" />
+          </div> <!-- .file-details -->
+
+          <div class="file-details">
+            <img src="./images/icon-pdf.png" alt="PDF File" />
+            <p class="file-name">Dashboard Structure</p>
+            <p class="file-owners">10 members</p>
+            <time datetime="2020-3-9">Mar 9, 2020</time>
+            <img src="./images/more-horizontal.svg" alt="Project Actions" />
+          </div> <!-- .file-details -->
+
+          <div class="file-details">
+            <img src="./images/icon-zip.png" alt="Zip File" />
+            <p class="file-name">Character Illustration</p>
+            <p class="file-owners">3 members</p>
+            <time datetime="2020-3-10">Mar 10, 2020</time>
+            <img src="./images/more-horizontal.svg" alt="Project Actions" />
+          </div> <!-- .file-details -->
+
+        </section> <!-- .files -->
+
+      </section> <!-- .recent-files -->
+
+      <section class="share-with-me">
+
+        <header class="content-header">
+
+          <h1>Share with me</h1>
+
+          <div class="header-actions">
+            <a href="">View All</a>
+          </div>
+
+        </header> <!-- .content-header -->
+
+        <section class="projects">
+
+          <article class="project">
+
+            <div class="project-participants">
+              <img src="./images/icon-single-folder.png" alt="Project Folder">
+
+              <ul class="participants">
+                <li><img src="./images/face7.jpg" alt="Participant" /></li>
+                <li><img src="./images/face8.jpg" alt="Participant" /></li>
+              </ul> <!-- .participants -->
+            </div> <!-- .project-participants -->
+
+            <h3 class="project-title">Landing Page</h3>
+            <p class="file-count">12 Files</p>
+
+          </article> <!-- .project -->
+
+          <article class="project">
+
+            <div class="project-participants">
+
+              <img src="./images/icon-single-folder.png" alt="Project Folder">
+
+              <ul class="participants">
+                <li><img src="./images/face9.jpg" alt="Participant" /></li>
+                <li><img src="./images/face10.jpg" alt="Participant" /></li>
+                <li><img src="./images/face2.jpg" alt="Participant" /></li>
+
+              </ul> <!-- .participants -->
+
+            </div> <!-- .project-participants -->
+
+            <h3 class="project-title">Illustration Pack</h3>
+            <p class="file-count">24 Files</p>
+
+          </article> <!-- .project -->
+
+          <article class="project">
+
+            <div class="project-participants">
+              <img src="./images/icon-single-folder.png" alt="Project Folder">
+
+              <ul class="participants">
+                <li><img src="./images/face11.jpg" alt="Participant" /></li>
+                <li><img src="./images/face12.jpg" alt="Participant" /></li>
+              </ul> <!-- .participants -->
+            </div> <!-- .project-participants -->
+
+            <h3 class="project-title">CV Design</h3>
+            <p class="file-count">6 Files</p>
+
+          </article> <!-- .project -->
+
+        </section> <!-- .projects -->
+
+      </section> <!-- .share-with-me -->
+
+    </main> <!-- .main-content -->
+
+    <aside class="stats">
+
+      <section class="user-profile">
+
+        <ul class="user">
+          <li><img src="./images/bell.svg" alt="Notifications" /></li>
+          <li><img src="./images/settings.svg" alt="Settings" /></li>
+          <li><span>Imran
+            <img src="./images/chevron-down.svg" alt="More Options"/>
+          </span></li>
+          <li><img src="./images/imran.png" alt="Profile Picture" /></li>
+        </ul><!-- .user -->
+
+      </section> <!-- .user-profile -->
+
+      <section class="usage-stats">
+
+        <h1>Storage</h1>
+
+        <!-- <div class="usage-graph">
+
+          <svg class="arc" width="190" height="190" viewBox="0 0 190 190">
+            <circle
+              class="arc--docs"
+              cx="95"
+              cy="95"
+              r="91"
+              fill="transparent"
+            />
+          </svg>
+
+        </div> <!-- .usage-graph -->
+
+        <div class="storage-percentage">
+          <div class="percent-used">
+            <p>85%</p>
+            <p>Used</p>
+          </div>
+        </div>
+
+        <p class="total-usage">420.2 GB of 500 GB used</p>
+
+        <div class="storage-breakdown">
+          <ul class="storage-items">
+
+            <li class="storage-item">
+              <img src="./images/icon-docs-lg.png" alt="Documents Folder" />
+              <p class="folder-name">Documents<span>720 files</span></p>
+              <p class="storage-used">200 GB</p>
+            </li>
+
+            <li class="storage-item">
+              <img src="./images/icon-video-lg.png" alt="Videos Folder" />
+              <p class="folder-name">Videos<span>124 files</span></p>
+              <p class="storage-used">125 GB</p>
+            </li>
+
+            <li class="storage-item">
+              <img src="./images/icon-photo-lg.png" alt="Images Folder" />
+              <p class="folder-name">Images<span>1200 files</span></p>
+              <p class="storage-used">75 GB</p>
+            </li>
+
+            <li class="storage-item">
+              <img src="./images/icon-other-lg.png" alt="Others Folder" />
+              <p class="folder-name">Others<span>30 files</span></p>
+              <p class="storage-used">50 GB</p>
+            </li>
+
+          </ul> <!-- .storage-items -->
+
+        </div> <!-- .storage-division -->
+
+      </section> <!-- .usage-stats -->
+
+    </aside> <!-- .usage-stats -->
+
+   </div> <!-- .container -->
 
   </body>
+
 </html>

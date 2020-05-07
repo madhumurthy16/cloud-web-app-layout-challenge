@@ -1,3 +1,15 @@
+/*--------------------------------------------------------------
+ >>> TABLE OF CONTENTS:
+ ----------------------------------------------------------------
+
+ 	0. 	CSS Reset
+ 	1. 	Base Styles
+ 	2. 	Main Layout
+ 	3. 	Sidebar Left - Navigation, Actions
+ 	4. 	Main Content
+ 	5. 	Sidebar Right - Stats
+ 	6. Media Queries
+
 /* -------------------------------------------------------------------------- */
 
 /*	0. CSS Reset
@@ -70,7 +82,7 @@ hr {
 
 /* -------------------------------------------------------------------------- */
 
-/*	1. General
+/*	1. Base Styles
 /* -------------------------------------------------------------------------- */
 
 * {
@@ -79,7 +91,6 @@ hr {
 
 html {
 	font-size: 62.5%; /* 1rem = 10px */
-	height: 100%;
 }
 
 body, input, button {
@@ -89,10 +100,6 @@ body, input, button {
 }
 
 body {
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100%;
  overflow-x: hidden;
 }
 
@@ -111,7 +118,6 @@ h1 {
 h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
-  color: #52566b;
 	color: #585c70;
 }
 
@@ -166,22 +172,21 @@ p, time {
 .container {
 	display: grid;
 	grid-row-gap: 20px;
-	max-width: 100%;
-	width: 1300px;
-	height: 98%;
+	width: 100%;
+	margin: auto;
 }
 
 /* -------------------------------------------------------------------------- */
 
-/*	2. Sidebar Left - Navigation, Actions
+/*	3. Sidebar Left - Navigation, Actions
 /* -------------------------------------------------------------------------- */
 
 .sidebar {
+	display: flex;
+	flex-direction: column;
 	background-color: #343951;
 	padding: 40px;
 	padding-bottom: 35px;
-	display: flex;
-	flex-direction: column;
 }
 
 .logo {
@@ -190,10 +195,10 @@ p, time {
 }
 
 .sidebar li.nav-item {
-	color: #777b8f;
 	display: flex;
 	align-items: center;
 	font-size: 1.6rem;
+	color: #777b8f;
 }
 
 .sidebar li.nav-item + li.nav-item {
@@ -206,6 +211,10 @@ p, time {
 	margin-right: 28px;
 }
 
+.sidebar .nav-item span {
+	margin-top: 3px;
+}
+
 .sidebar .nav-item.active {
 	color: #fff;
 }
@@ -215,19 +224,19 @@ p, time {
 	border-top: 1px solid #4e5265;
 }
 
-header {
-	margin-bottom: 30px;
+.sidebar .main-header {
+	margin-bottom: 40px;
 }
 
 .sidebar .actions {
 	display: flex;
 	align-items: center;
 	margin-top: auto;
-	background-color: #464b61;
+	margin-bottom: 25px;
 	padding: 15px;
 	border-radius: 15px;
+	background-color: #464b61;
 	color: #8f93a0;
-	margin-bottom: 25px;
 	font-size: 1.4rem;
 }
 
@@ -247,6 +256,8 @@ header {
 }
 
 .btn-create-action {
+	display: flex;
+	align-items: center;
 	background-color: #ffa000;
 	color: #ffe6bc;
 	padding: 5px;
@@ -254,35 +265,24 @@ header {
 	padding-right: 5px;
 	border-radius: 8px;
 	height: 38px;
-	display: flex;
-	align-items: center;
 }
 
 .btn-create-action::after {
 	content: '+';
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: #ffb333;
 	width: 28px;
 	height: 28px;
 	font-size: 2.4rem;
 	border-radius: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	margin-left: auto;
-}
-
-/* Mobile Navigation  ------------ */
-
-.burger div {
-	width: 25px;
-	height: 3px;
-	background-color: #fff;
-	margin: 5px;
 }
 
 /* -------------------------------------------------------------------------- */
 
-/*	0. Main Content
+/*	4. Main Content
 /* -------------------------------------------------------------------------- */
 
 .main-content {
@@ -347,7 +347,7 @@ section.projects {
 	margin-right: 20px;
 }
 
-/* Recent Projects  -------------- */
+/* Recent Projects ( Recently Used )  -------------- */
 
 .recent-projects {
 	display: flex;
@@ -390,7 +390,6 @@ section.projects {
 	position: absolute;
 	right: 0;
 	top: 20px;
-
 }
 
 .project-participants {
@@ -441,16 +440,10 @@ section.projects {
 	top: -9px;
 	width: 23px;
 	height: 23px;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
-/* Recent Files ------------------ */
-
-/*.files {
-	display: grid;
-	grid-template-rows: repeat(4, 1fr);
-	grid-row-gap: 20px;
-}*/
+/* Recent Files  ----------------------------------- */
 
 .headings {
 	margin-bottom: 25px;
@@ -546,7 +539,7 @@ section.share-with-me article .project-participants ul li:first-child img {
 
 /* -------------------------------------------------------------------------- */
 
-/*	3. Sidebar Right - Stats
+/*	5. Sidebar Right - Stats
 /* -------------------------------------------------------------------------- */
 
 .stats {
@@ -563,15 +556,13 @@ section.share-with-me article .project-participants ul li:first-child img {
 	margin-bottom: 25px;
 }
 
-
 .stats .user-profile ul {
 	padding: 0 40px 0 40px;
 }
 
 .stats .user-profile ul {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	flex-flow: column wrap;
 }
 
 .stats .user-profile ul li {
@@ -626,20 +617,20 @@ section.share-with-me article .project-participants ul li:first-child img {
 }*/
 
 .stats .usage-stats .storage-percentage {
-	margin: 35px 0 25px 0;
 	display: flex;
   justify-content: center;
+	margin: 35px 0 25px 0;
 }
 
 .stats .usage-stats .storage-percentage  .percent-used {
-	background-color: #fff;
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	background-color: #fff;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
 }
 
 .stats .usage-stats .storage-percentage  .percent-used p:first-child {
@@ -652,16 +643,15 @@ section.share-with-me article .project-participants ul li:first-child img {
 }
 
 .stats .usage-stats p.total-usage {
-	margin-bottom: 35px;
 	font-size: 14px;
 	color: #a5aaca;
 	text-align: center;
+	margin-bottom: 35px;
 }
 
 .stats .usage-stats .storage-items {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	flex-flow: column wrap;
 }
 
 .stats .usage-stats .storage-items .storage-item {
@@ -680,15 +670,15 @@ section.share-with-me article .project-participants ul li:first-child img {
 }
 
 .stats .usage-stats .storage-items .storage-item .folder-name {
-	margin-right: auto;
 	display: flex;
 	flex-direction: column;
-	font-size: 14px;
+	font-size: 1.4rem;
 	color: #5d6175;
+	margin-right: auto;
 }
 
 .stats .usage-stats .storage-items .storage-item .folder-name span {
-	font-size: 12px;
+	font-size: 1.2rem;
 	color: #a5aaca;
 }
 
@@ -696,7 +686,7 @@ section.share-with-me article .project-participants ul li:first-child img {
 	padding: 8px 12px 4px;
 	background-color: #fff;
 	border-radius: 6px;
-	font-size: 14px;
+	font-size: 1.4rem;
 	color: #65697b;
 }
 
@@ -705,9 +695,11 @@ section.share-with-me article .project-participants ul li:first-child img {
 /*	Media Queries
 /* -------------------------------------------------------------------------- */
 
-/* Sidebar Right -Stats ---------------------------*/
 
 @media only all and ( min-width: 320px ) {
+
+	/* Sidebar Right - Stats ---------------------------*/
+
 	.stats .user-profile ul {
 			flex-direction: row;
 	    align-items: center;
@@ -722,27 +714,10 @@ section.share-with-me article .project-participants ul li:first-child img {
 	}
 }
 
-
-@media only all and ( min-width: 768px ) {
+@media only all and ( min-width: 769px ) {
 
 	.container {
-		grid-template-columns: 220px 1fr 340px;
 		grid-column-gap: 20px;
-	}
-
-	/* Sidebar Left -----------------------------------*/
-
-	.sidebar {
-		border-top-left-radius: 25px;
-		border-bottom-left-radius: 25px;
-	}
-
-	header {
-		margin-bottom: 30px;
-	}
-
-	.burger {
-		display: none;
 	}
 
 	/* Main Content -----------------------------------*/
@@ -752,7 +727,7 @@ section.share-with-me article .project-participants ul li:first-child img {
 		flex-direction: row;
 	}
 
-	/* All articles will be displayed in a single row and take up equal amount of available space */
+	/* All articles will be displayed in a single row (side by side) and take up equal amount of available space */
 	.project {
 		flex: 1;
 	}
@@ -762,8 +737,7 @@ section.share-with-me article .project-participants ul li:first-child img {
 		margin-left: 12px
 	}
 
-	/* Share with me ----------------- */
-
+	/* RECENT FILES  ----------------- */
 	.headings,
 		.file-details {
 			grid-template-columns: 40px  45.22% 2fr 2fr 1fr;
@@ -788,8 +762,56 @@ section.share-with-me article .project-participants ul li:first-child img {
 		.file-details img:last-child {
 			justify-self: end;
 		}
+}
 
-		/* Sidebar Right -Stats ---------------------------*/
+@media only all and ( min-width: 768px ) and ( max-width: 1024px ) {
+
+	/* Sidebar Left - Navigation ----------------------*/
+
+	.sidebar .main-header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main-header .logo {
+		width: 100px;
+		align-self: center;
+		margin-bottom: 30px;
+	}
+
+	.sidebar nav ul.nav-items {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.sidebar nav ul.nav-items li.nav-item {
+		margin-top: 0;
+	}
+
+	.sidebar ul.nav-items li.nav-item img {
+		margin-right: 10px;
+	}
+
+	.sidebar .actions {
+		justify-content: center;
+	}
+}
+
+@media only all and ( min-width: 1025px ) {
+
+	.container {
+		width: 90%;
+		grid-template-columns: 0.94fr 3fr 1.46fr;
+	}
+
+	/* Sidebar Left -----------------------------------*/
+
+	.sidebar {
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+
+	/* Sidebar Right - Stats ---------------------------*/
 
 	.stats {
 		border-top-right-radius: 25px;
@@ -797,9 +819,26 @@ section.share-with-me article .project-participants ul li:first-child img {
 	}
 }
 
-/* Share with me ----------------- */
+@media only all and (min-width: 1025px ) and ( max-width: 1075px ) {
+
+	/* Sidebar Right - Stats ---------------------------*/
+
+	.stats .user-profile ul li:nth-child(2) {
+		margin-right: 60px;
+	}
+}
+
+@media ( min-width: 1300px ) {
+	.container {
+		width: 1300px;
+	}
+}
 
 @media only all and ( max-width: 1264px ) {
+
+	/* Main Content -----------------------------------*/
+
+	/* SHARE WITH ME  ---------------- */
 	.project-participants > img {
 		margin-bottom: 10px;
 	}
