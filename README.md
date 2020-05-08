@@ -7,7 +7,7 @@ This [challenge](https://github.com/dceddia/css-layout-challenge) created by [Da
 HTML5, CSS3 (Flexbox and CSS Grids).
 
 ### Challenges:
-Creating the table like layout in the 'Recent Files' section. Instead of Flexbox (which would have been easier) I chose to use the Grid template areas (new concept for me). With the help of a few resources, I was able to create a mobile first responsive layout using the Grid template areas. 
+Creating the table like layout in the 'Recent Files' section. Instead of Flexbox (which would have been easier) I chose to use the Grid template areas (new for me). With the help of a few resources, I was able to create a mobile first responsive layout and practice using Grid template areas. 
 
 ### Resources:
 - [Original Design](https://dribbble.com/shots/10747116-Cloud-Web-App)
