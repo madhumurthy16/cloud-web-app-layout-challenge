@@ -1,10 +1,9 @@
 # Cloud Web App - CSS Layout Challenge 
 
 ### Description: 
-Build out the solution (layout and design) based on the original design by [Imran on Dribble](https://dribbble.com/shots/10747116-Cloud-Web-App). 
-The challenge was created by [Dave Ceddia](https://github.com/dceddia/css-layout-challenge).
+This [challenge](https://github.com/dceddia/css-layout-challenge) created by [Dave Ceddia](https://daveceddia.com/about/) was to Build out the solution (layout and design) based on the original design by [Imran on Dribble](https://dribbble.com/shots/10747116-Cloud-Web-App). This was a great project to practice Flexbox and CSS Grids layout techniques and also pay attention to details while building out the design.
 
-### Technology:
+### Built with:
 HTML5, CSS3 (Flexbox and CSS Grids).
 
 ### Challenges:
