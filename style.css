@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------
  >>> TABLE OF CONTENTS:
  ----------------------------------------------------------------
 
@@ -330,7 +330,7 @@ input::-moz-placeholder {
   line-height: revert; /* Reset to the value from the user-agent stylesheet. */
 }
 
-/* Shared styles ----------------- */
+/* Shared styles between Recent Projects, Recent Files and Share With Me ----------------- */
 
 .content-header {
 	display: flex;
