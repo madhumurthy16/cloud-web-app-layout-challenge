@@ -7,8 +7,8 @@
  	2. 	Main Layout
  	3. 	Sidebar Left - Navigation, Actions
  	4. 	Main Content
- 	5. 	Sidebar Right - Stats
- 	6. Media Queries
+ 	5.  Sidebar Right - Stats
+ 	6.  Media Queries
 
 /* -------------------------------------------------------------------------- */
 
@@ -739,29 +739,29 @@ section.share-with-me article .project-participants ul li:first-child img {
 
 	/* RECENT FILES  ----------------- */
 	.headings,
-		.file-details {
-			grid-template-columns: 40px  45.22% 2fr 2fr 1fr;
-			grid-template-areas:
-				"icon name owners date-modified more-actions";
+	.file-details {
+		grid-template-columns: 40px  45.22% 2fr 2fr 1fr;
+		grid-template-areas:
+			"icon name owners date-modified more-actions";
 		}
 
-		.headings .name {
-			grid-column: 1 / 3;
-		}
+	.headings .name {
+		grid-column: 1 / 3;
+	}
 
-		.headings .owners,
-		.file-details .file-owners {
-			padding-right: 30px;
-		}
+	.headings .owners,
+	.file-details .file-owners {
+		padding-right: 30px;
+	}
 
-		.headings .date-modified,
-		.file-details time {
-			justify-self: center;
-		}
+	.headings .date-modified,
+	.file-details time {
+		justify-self: center;
+	}
 
-		.file-details img:last-child {
-			justify-self: end;
-		}
+	.file-details img:last-child {
+		justify-self: end;
+	}
 }
 
 @media only all and ( min-width: 768px ) and ( max-width: 1024px ) {
