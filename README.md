@@ -4,7 +4,7 @@ View live: https://cloud-web-app.netlify.app/
 ### Description: 
 This [challenge](https://github.com/dceddia/css-layout-challenge) created by [Dave Ceddia](https://daveceddia.com/about/) was to build out the solution (layout and design) to an original design by [Imran on Dribble](https://dribbble.com/shots/10747116-Cloud-Web-App). This was a great project to practice Flexbox and CSS Grid layout techniques. 
 
-### Built with:
+### Technology used:
 HTML5, CSS3 (Flexbox and CSS Grids).
 
 ### Challenges:
